@@ -246,6 +246,9 @@
 
 				// Resize SLIDEE to fit all items
 				$slidee[0].style[o.horizontal ? 'width' : 'height'] = (borderBox ? slideeSize: slideeSize - paddingStart - paddingEnd) + 'px';
+				if (!parallax && o.horizontal) {
+					$frame.css('height', $slidee.outerHeight());
+				}
 
 				// Adjust internal SLIDEE size for last margin
 				slideeSize -= ignoredMargin;
