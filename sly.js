@@ -5,7 +5,7 @@
  * Licensed under the MIT license.
  * http://opensource.org/licenses/MIT
  */
-;(function ($, w, undefined) {
+;(function(define) { define(function() { return (function ($, w, undefined) {
 	'use strict';
 
 	var pluginName = 'sly';
@@ -2097,3 +2097,4 @@
 		disabledClass: 'disabled'  // Class for disabled navigation elements.
 	};
 }(jQuery, window));
+}) }(typeof define === 'function' && define.amd ? define : function(factory) { window['jQuery'] = factory(); }));
